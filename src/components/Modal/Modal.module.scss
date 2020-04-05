@@ -1,0 +1,64 @@
+.wrapper {
+  padding: 70px 80px 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 60vw;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px -5px rgba(#313131, .3);
+  position: fixed;
+}
+
+.wrapperBlack {
+  @extend .wrapper;
+  background-color: #313131;
+  box-shadow: 0 20px 40px -5px rgba(#ffffff, .3);
+}
+
+.closeButton {
+  width: 27px;
+  height: 27px;
+  background: #313131;
+  border: none; 
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  
+  &::before, 
+  &::after {
+    content: '';
+    width: 16px;
+    height: 2px;
+    position: absolute;
+    background: white;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    transform-origin: 50%;
+  }
+  
+  &::before {
+    transform: rotate(45deg);
+  }
+  
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.closeButtonBlack {
+  @extend .closeButton;
+  background: #ffffff;
+
+  &::before, 
+  &::after {
+    @extend .closeButton::before;
+    background: #313131;
+  }
+}

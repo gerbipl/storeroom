@@ -1,0 +1,48 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+    top: 35px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.wrapper {
+    list-style: none;
+    padding: 50px 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: appear .5s ease;
+    justify-content: space-between;
+}
+
+.count {
+    margin: 10px 5px 20px;
+    font-weight: 300;
+}
+
+.countBlack{
+  @extend .count;
+  color: #ffffff;
+}
+
+.category{
+  margin: 8px 0 0 5px;
+  font-weight: 600;
+}
+
+.categoryBlack {
+  @extend .category;
+  color: #ffffff;
+}
+
+.leftPanel{
+  display: flex;
+}
+
+.rightPanel{
+  @extend .leftPanel;
+}

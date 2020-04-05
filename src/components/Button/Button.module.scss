@@ -1,0 +1,35 @@
+.button {
+  display: block;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 7px 12px;
+  font-weight: 500;
+  background: none;
+  border: 2px solid #313131;
+  color: #313131;
+  cursor: pointer;
+}
+
+.buttonBlack {
+  @extend .button;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.secondary {
+  @extend .button;
+  
+  background-color: #313131;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: .8em; 
+  box-shadow: 0 5px 20px -5px rgba(#818181, .9);
+}
+
+.secondaryBlack {
+  @extend .secondary;
+  
+  background-color: #ffffff;
+  color: #313131;
+  border: 2px solid #ffffff;
+}
